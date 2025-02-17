@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-17T22:20:06 IST" name="Surefire suite" finished-at="2025-02-17T22:20:09 IST" duration-ms="2063">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.automation.runners.TestRunner@4cc8eb05]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-02-17T22:20:06 IST" name="Surefire test" finished-at="2025-02-17T22:20:09 IST" duration-ms="2063">
+      <class name="com.automation.runners.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.automation.runners.TestRunner@4cc8eb05]" started-at="2025-02-17T22:20:07 IST" name="setUpClass" finished-at="2025-02-17T22:20:08 IST" duration-ms="1057" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@462abec3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.automation.runners.TestRunner@4cc8eb05]" started-at="2025-02-17T22:20:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-17T22:20:08 IST" duration-ms="330" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+at com.automation.stepdefinitions.LoginSteps.user_is_on_login_page(LoginSteps.java:21)
+at ✽.User is on login page(file:///Users/prabhuloganathan/eclipse-workspace-Feb/SeleniumBase/src/test/resources/features/Login.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.automation.runners.TestRunner@4cc8eb05]" started-at="2025-02-17T22:20:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-17T22:20:08 IST" duration-ms="26" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+at com.automation.stepdefinitions.LoginSteps.user_is_on_login_page(LoginSteps.java:21)
+at ✽.User is on login page(file:///Users/prabhuloganathan/eclipse-workspace-Feb/SeleniumBase/src/test/resources/features/Login2.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.automation.runners.TestRunner@4cc8eb05]" started-at="2025-02-17T22:20:08 IST" name="tearDownClass" finished-at="2025-02-17T22:20:09 IST" duration-ms="595" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.automation.runners.TestRunner -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.automation.runners.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.583 s <<< FAILURE! - in com.automation.runners.TestRunner
+com.automation.runners.TestRunner.runScenario["Successful login with valid credentials", "Login Feature"](1)  Time elapsed: 0.335 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+	at com.automation.stepdefinitions.LoginSteps.user_is_on_login_page(LoginSteps.java:21)
+	at ✽.User is on login page(file:///Users/prabhuloganathan/eclipse-workspace-Feb/SeleniumBase/src/test/resources/features/Login.feature:4)
+
+com.automation.runners.TestRunner.runScenario["Successful login with valid credentials", "Login Feature"](2)  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+	at com.automation.stepdefinitions.LoginSteps.user_is_on_login_page(LoginSteps.java:21)
+	at ✽.User is on login page(file:///Users/prabhuloganathan/eclipse-workspace-Feb/SeleniumBase/src/test/resources/features/Login2.feature:4)
+
