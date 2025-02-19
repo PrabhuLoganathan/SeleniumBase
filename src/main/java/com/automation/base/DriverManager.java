@@ -4,26 +4,27 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DriverManager {
-    protected static WebDriver driver;
 
-  
+    // ThreadLocal instance to hold separate WebDriver instances per thread
+    protected static ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
 
     public static WebDriver setDriver() {
-        if (driver == null) {
-            driver = new ChromeDriver();
+        if (driverThreadLocal.get() == null) {
+            WebDriver driver = new ChromeDriver();  // Create new driver instance
             driver.manage().window().maximize();
+            driverThreadLocal.set(driver);  // Store it in ThreadLocal
         }
-        return driver;
+        return driverThreadLocal.get();
     }
 
     public static void quitDriver() {
-        if (driver != null) {
-            driver.quit();
-            driver = null; // Reset driver instance after quitting
+        if (driverThreadLocal.get() != null) {
+            driverThreadLocal.get().quit();  // Quit WebDriver instance
+            driverThreadLocal.remove();  // Remove driver instance from ThreadLocal
         }
     }
-    
+
     public static WebDriver getDriver() {
-		return driver;
-	}
+        return driverThreadLocal.get();  // Retrieve WebDriver for the current thread
+    }
 }

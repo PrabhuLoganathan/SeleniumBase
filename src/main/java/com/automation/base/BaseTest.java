@@ -1,24 +1,17 @@
 package com.automation.base;
 
-import org.openqa.selenium.WebDriver;
-
 import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
-import io.cucumber.java.BeforeAll;
 
-
-public class BaseTest extends DriverManager {
-  
+public class BaseTest {
 
     @Before
-    public static void before_all() {
-        driver = DriverManager.setDriver();
+    public void before_each() {
+        DriverManager.setDriver();  // Initialize driver for each scenario
     }
 
     @After
-    public static void after_all() {
-        DriverManager.quitDriver();
+    public void after_each() {
+        DriverManager.quitDriver(); // Quit driver after each scenario
     }
-    
 }
